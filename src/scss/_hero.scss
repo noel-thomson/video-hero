@@ -1,0 +1,94 @@
+#hero {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 0 20px;
+  .video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: url('https://mixkit.imgix.net/videos/preview/mixkit-top-aerial-shot-of-seashore-with-rocks-1090-0.jpg')
+      no-repeat center center/cover;
+    &:after {
+      content: '';
+      z-index: 1;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.3);
+      position: absolute;
+    }
+    video {
+      min-width: 100%;
+      min-height: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+    }
+  }
+  .content-container {
+    z-index: 2;
+    h1 {
+      font-weight: 700;
+      font-size: 100px;
+      line-height: 1.2;
+      margin-bottom: 15px;
+    }
+
+    h3 {
+      font-size: 30px;
+    }
+    .btn {
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      display: inline-block;
+      padding: 15px 30px;
+      background: #3a4052;
+      color: #fff;
+      border-radius: 30px;
+      border: solid #fff 1px;
+      margin-top: 25px;
+      opacity: 0.7;
+      transition: all 0.3s ease-in-out;
+      text-transform: uppercase;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+#spacer {
+  height: 500px;
+  position: relative;
+  .slant:nth-of-type(1) {
+    clip-path: polygon(0 100%, 100% 0, 100% 100%);
+    background-color: white;
+    position: absolute;
+    height: 5vh;
+    top: -5vh;
+    left: 50%;
+    width: 50%;
+    z-index: 5;
+  }
+  .slant:nth-of-type(2) {
+    clip-path: polygon(0 100%, 0 0, 100% 100%);
+    background-color: white;
+    position: absolute;
+    height: 5vh;
+    top: -5vh;
+    left: 0%;
+    width: 50%;
+    z-index: 5;
+  }
+}
