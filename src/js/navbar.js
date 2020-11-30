@@ -35,7 +35,6 @@ window.onscroll = () => {
 };
 
 // dropdown menu
-
 const about = navLinks[0];
 const dropdown = document.querySelector('.dropdown-menu');
 const chevron = document.querySelector('.chevron');
