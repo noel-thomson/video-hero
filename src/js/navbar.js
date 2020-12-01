@@ -2,16 +2,18 @@
 const navbar = document.querySelector('#navbar');
 const mobileToggle = document.querySelector('.top-nav__mobile-toggle');
 const navLinks = document.querySelectorAll('.top-nav__link');
+const body = document.querySelector('body');
 
 mobileToggle.addEventListener('click', () => {
   navbar.classList.toggle('open');
+  body.classList.toggle('freeze');
 });
 
 // close mobile menu after clicking link
 for (let navLink of navLinks) {
   navLink.addEventListener('click', () => {
-    if (!navLink.classList.contains('capabilities')) {
-      if (navbar.classList.contains('open')) {
+    if (navbar.classList.contains('open')) {
+      if (!navLink.classList.contains('capabilities')) {
         navbar.classList.toggle('open');
       }
     }
@@ -26,6 +28,7 @@ window.onscroll = () => {
     return;
   }
   if (currentScrollPos === 0) {
+    // top
     navbar.classList.remove('white');
   } else if (prevScrollPos > currentScrollPos && currentScrollPos > 0) {
     // scroll up
@@ -60,8 +63,10 @@ chevron.addEventListener('mouseenter', () => {
 });
 dropdown.addEventListener('mouseleave', () => {
   if (!navbar.classList.contains('open')) {
-    navbar.classList.remove('white');
     dropdown.style.opacity = '0';
+    if (window.pageYOffset === 0) {
+      navbar.classList.remove('white');
+    }
   }
 });
 capabilities.addEventListener('click', () => {

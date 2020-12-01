@@ -14,16 +14,15 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background: url('https://mixkit.imgix.net/videos/preview/mixkit-top-aerial-shot-of-seashore-with-rocks-1090-0.jpg')
-      no-repeat center center/cover;
+    // background: url('https://mixkit.imgix.net/videos/preview/mixkit-top-aerial-shot-of-seashore-with-rocks-1090-0.jpg')
+    //   no-repeat center center/cover;
     &:after {
       content: '';
-      z-index: -1;
       height: 100%;
       width: 100%;
       top: 0;
       left: 0;
-      background: rgba(0, 0, 0, 0.3);
+      background: rgba(0, 0, 0, 0.05);
       position: absolute;
     }
     video {
@@ -80,22 +79,22 @@
   height: 500px;
   position: relative;
   .slant:nth-of-type(1) {
-    clip-path: polygon(0 100%, 100% 0, 100% 100%);
-    background-color: white;
-    position: absolute;
-    height: 5vh;
-    top: calc(-5vh + 1px);
-    left: 50%;
-    width: 50%;
-    z-index: 1;
-  }
-  .slant:nth-of-type(2) {
-    clip-path: polygon(0 100%, 0 0, 100% 100%);
+    clip-path: polygon(0 100%, 0 0, 105% 100%);
     background-color: white;
     position: absolute;
     height: 5vh;
     top: calc(-5vh + 1px);
     left: 0%;
+    width: 50%;
+    z-index: 1;
+  }
+  .slant:nth-of-type(2) {
+    clip-path: polygon(-5% 100%, 100% 0, 100% 100%);
+    background-color: white;
+    position: absolute;
+    height: 5vh;
+    top: calc(-5vh + 1px);
+    left: 50%;
     width: 50%;
     z-index: 1;
   }

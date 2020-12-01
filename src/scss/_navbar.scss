@@ -113,9 +113,6 @@
             font-weight: 500;
             margin-bottom: 20px;
           }
-          p {
-            font-size: 18px;
-          }
         }
         .col:nth-child(n + 2) {
           max-width: 20%;
@@ -126,6 +123,7 @@
           }
           p {
             font-size: 14px;
+            line-height: 1.5;
           }
           .btn {
             background-color: white;
@@ -349,7 +347,7 @@
           }
         }
         .top-nav__list__wrapper {
-          top: 0;
+          top: 0; //
         }
         .top-nav__mobile-toggle {
           .top-nav__hamburger {
@@ -362,6 +360,9 @@
       }
     }
   }
+}
+body.freeze {
+  overflow-y: hidden;
 }
 
 // * decrease logo size *

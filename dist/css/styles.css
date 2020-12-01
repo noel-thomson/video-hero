@@ -223,8 +223,6 @@ section {
           font-size: 40px;
           font-weight: 500;
           margin-bottom: 20px; }
-        .dropdown .dropdown-menu .container .row .col:nth-of-type(1) p {
-          font-size: 18px; }
       .dropdown .dropdown-menu .container .row .col:nth-child(n + 2) {
         max-width: 20%; }
         .dropdown .dropdown-menu .container .row .col:nth-child(n + 2) h3 {
@@ -232,7 +230,8 @@ section {
           margin-bottom: 20px;
           font-size: 20px; }
         .dropdown .dropdown-menu .container .row .col:nth-child(n + 2) p {
-          font-size: 14px; }
+          font-size: 14px;
+          line-height: 1.5; }
         .dropdown .dropdown-menu .container .row .col:nth-child(n + 2) .btn {
           background-color: white;
           border: 1px solid black;
@@ -389,6 +388,9 @@ ul.top-nav__list .dropdown-menu {
     background: black;
     transition-delay: 0s; } }
 
+body.freeze {
+  overflow-y: hidden; }
+
 .top-nav__mobile-toggle {
   display: none;
   position: absolute;
@@ -458,16 +460,14 @@ ul.top-nav__list .dropdown-menu {
     left: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden;
-    background: url("https://mixkit.imgix.net/videos/preview/mixkit-top-aerial-shot-of-seashore-with-rocks-1090-0.jpg") no-repeat center center/cover; }
+    overflow: hidden; }
     #hero .video-container:after {
       content: '';
-      z-index: -1;
       height: 100%;
       width: 100%;
       top: 0;
       left: 0;
-      background: rgba(0, 0, 0, 0.3);
+      background: rgba(0, 0, 0, 0.05);
       position: absolute; }
     #hero .video-container video {
       min-width: 100%;
@@ -515,23 +515,23 @@ ul.top-nav__list .dropdown-menu {
   height: 500px;
   position: relative; }
   #spacer .slant:nth-of-type(1) {
-    -webkit-clip-path: polygon(0 100%, 100% 0, 100% 100%);
-            clip-path: polygon(0 100%, 100% 0, 100% 100%);
-    background-color: white;
-    position: absolute;
-    height: 5vh;
-    top: calc(-5vh + 1px);
-    left: 50%;
-    width: 50%;
-    z-index: 1; }
-  #spacer .slant:nth-of-type(2) {
-    -webkit-clip-path: polygon(0 100%, 0 0, 100% 100%);
-            clip-path: polygon(0 100%, 0 0, 100% 100%);
+    -webkit-clip-path: polygon(0 100%, 0 0, 105% 100%);
+            clip-path: polygon(0 100%, 0 0, 105% 100%);
     background-color: white;
     position: absolute;
     height: 5vh;
     top: calc(-5vh + 1px);
     left: 0%;
+    width: 50%;
+    z-index: 1; }
+  #spacer .slant:nth-of-type(2) {
+    -webkit-clip-path: polygon(-5% 100%, 100% 0, 100% 100%);
+            clip-path: polygon(-5% 100%, 100% 0, 100% 100%);
+    background-color: white;
+    position: absolute;
+    height: 5vh;
+    top: calc(-5vh + 1px);
+    left: 50%;
     width: 50%;
     z-index: 1; }
 
