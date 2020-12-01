@@ -141,7 +141,7 @@ section {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 5;
+  z-index: 2;
   transition: all 0.375s ease 0.05s; }
   #navbar .navbar__wrapper {
     height: 100%; }
@@ -462,7 +462,7 @@ ul.top-nav__list .dropdown-menu {
     background: url("https://mixkit.imgix.net/videos/preview/mixkit-top-aerial-shot-of-seashore-with-rocks-1090-0.jpg") no-repeat center center/cover; }
     #hero .video-container:after {
       content: '';
-      z-index: 1;
+      z-index: -1;
       height: 100%;
       width: 100%;
       top: 0;
@@ -479,7 +479,7 @@ ul.top-nav__list .dropdown-menu {
       -o-object-fit: cover;
          object-fit: cover; }
   #hero .content-container {
-    z-index: 2; }
+    z-index: 1; }
     #hero .content-container h1,
     #hero .content-container h3,
     #hero .content-container .btn {
@@ -523,7 +523,7 @@ ul.top-nav__list .dropdown-menu {
     top: calc(-5vh + 1px);
     left: 50%;
     width: 50%;
-    z-index: 5; }
+    z-index: 1; }
   #spacer .slant:nth-of-type(2) {
     -webkit-clip-path: polygon(0 100%, 0 0, 100% 100%);
             clip-path: polygon(0 100%, 0 0, 100% 100%);
@@ -533,7 +533,7 @@ ul.top-nav__list .dropdown-menu {
     top: calc(-5vh + 1px);
     left: 0%;
     width: 50%;
-    z-index: 5; }
+    z-index: 1; }
 
 h1 {
   -webkit-animation: leftIn 0.75s ease;
