@@ -38,14 +38,19 @@
   }
   .content-container {
     z-index: 2;
+    h1,
+    h3,
+    .btn {
+      opacity: 0;
+    }
     h1 {
       font-weight: 700;
       font-size: 100px;
-      line-height: 1.2;
       margin-bottom: 15px;
     }
     h3 {
-      font-size: 30px;
+      font-size: 36px;
+      line-height: 2;
     }
     .btn {
       font-size: 14px;
@@ -57,12 +62,14 @@
       color: #fff;
       border-radius: 30px;
       border: solid rgba(255, 255, 255, 0.7) 2px;
-      margin-top: 25px;
-      opacity: 0.7;
-      transition: all 0.3s ease-in-out;
+      margin-top: 30px;
       text-transform: uppercase;
       &:hover {
+        transition: all 0.7s ease;
+        animation-fill-mode: none;
         opacity: 1;
+        background: rgba(255, 255, 255, 0.9);
+        color: black;
       }
     }
   }
@@ -92,6 +99,49 @@
   }
 }
 
+h1 {
+  animation: leftIn 0.75s ease;
+  animation-fill-mode: forwards;
+}
+@keyframes leftIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+h3 {
+  animation: rightIn 0.75s ease 0.3s;
+  animation-fill-mode: forwards;
+}
+@keyframes rightIn {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.btn {
+  animation: upIn 0.75s ease 0.6s;
+  animation-fill-mode: forwards;
+}
+@keyframes upIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 0.85;
+    transform: translateY(0);
+  }
+}
+
 @media (max-width: 990px) {
   #hero {
     .content-container {
@@ -99,7 +149,7 @@
         font-size: 80px; //
       }
       h3 {
-        font-size: 26px; //
+        font-size: 30px; //
       }
     }
   }
@@ -111,7 +161,7 @@
         font-size: 60px; //
       }
       h3 {
-        font-size: 20px; //
+        font-size: 24px; //
       }
     }
   }

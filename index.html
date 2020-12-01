@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./imgs/logo/logo.svg" type="image/x-icon">
   <title>Document</title>
   <link rel="stylesheet" href="./dist/css/styles.css">
 </head>
@@ -22,29 +23,55 @@
         <div class="top-nav__list__wrapper">
           <div class="top-nav__list__container">
             <ul class="top-nav__list">
-              <li>
-                <a class="top-nav__link" href="#about">About</a>
-                <!-- dropdown -->
+              <!-- dropdown -->
+              <li class="dropdown">
+                <a class="top-nav__link capabilities" href="#">Capabilities</a>
                 <svg width="8" height="5" viewBox="0 0 8 5" id="">
                   <path class="chevron" d="M4 3.028L1.215 0 0 1.163 4 5l4-3.837L6.785 0z"></path>
                 </svg>
+                <ul class="sub-menu">
+                  <li> 
+                    <a href="#">Strategy</a> 
+                  </li>
+                  <li> 
+                    <a href="#">Design</a> 
+                  </li>
+                  <li> 
+                    <a href="#">Technology</a> 
+                  </li>
+                </ul>
                 <div class="dropdown-menu">
                   <div class="container">
                     <div class="row">
                       <div class="col">
-                        <h1>About Noel</h1>
+                        <h1>Capabilities</h1>
                         <p>Motivated to produce results</p>
+                      </div>
+                      <div class="col">
+                        <h3>Strategy</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, pariatur.</p>
+                        <a href="#" class="btn">Learn More</a>
+                      </div>
+                      <div class="col">
+                        <h3>Design</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, pariatur.</p>
+                        <a href="#" class="btn">Learn More</a>
+                      </div>
+                      <div class="col">
+                        <h3>Technology</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, pariatur.</p>
+                        <a href="#" class="btn">Learn More</a>
                       </div>
                     </div>
                   </div>
                 </div>
-                <!-- dropdown -->
+                <!-- end dropdown -->
               </li>
               <li>
-                <a class="top-nav__link" href="#showcase">Work</a>
+                <a class="top-nav__link" href="#">Work</a>
               </li>
               <li>
-                <a class="top-nav__link" href="#clients">Clients</a>
+                <a class="top-nav__link" href="#">Clients</a>
               </li>
               <li>
                 <a class="top-nav__link cta" href="#">Contact</a>
