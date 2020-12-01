@@ -208,7 +208,7 @@ section {
   .dropdown .dropdown-menu .container {
     font-family: 'Helvetica Neue', sans-serif;
     text-align: left;
-    padding: 40px; }
+    padding: 20px 40px; }
     .dropdown .dropdown-menu .container p {
       color: #546672; }
     .dropdown .dropdown-menu .container .row {
@@ -467,7 +467,7 @@ body.freeze {
       width: 100%;
       top: 0;
       left: 0;
-      background: rgba(0, 0, 0, 0.05);
+      background: rgba(0, 0, 0, 0.1);
       position: absolute; }
     #hero .video-container video {
       min-width: 100%;
@@ -479,7 +479,10 @@ body.freeze {
       -o-object-fit: cover;
          object-fit: cover; }
   #hero .content-container {
-    z-index: 1; }
+    z-index: 1;
+    position: absolute;
+    top: 52%;
+    transform: translateY(-50%); }
     #hero .content-container h1,
     #hero .content-container h3,
     #hero .content-container .btn {
