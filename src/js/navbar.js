@@ -22,6 +22,7 @@ let prevScrollPos = window.pageYOffset;
 window.onscroll = () => {
   let currentScrollPos = window.pageYOffset;
   if (currentScrollPos < 0) {
+    // mobile overscroll
     return;
   }
   if (currentScrollPos === 0) {
@@ -38,30 +39,6 @@ window.onscroll = () => {
   }
   prevScrollPos = currentScrollPos;
 };
-
-// let prevScrollPos = window.pageYOffset;
-// window.onscroll = () => {
-//   let currentScrollPos = window.pageYOffset;
-//   if (currentScrollPos < 0) {
-//     // mobile overscroll
-//     return;
-//   }
-//   if (currentScrollPos === 0) {
-//     document.getElementById('navbar').classList.remove('white');
-//     dropdown.style.opacity = '0';
-//   } else if (prevScrollPos > currentScrollPos && currentScrollPos > 0) {
-//     // scroll up
-//     document.getElementById('navbar').classList.remove('hide');
-//     document.getElementById('navbar').classList.add('white');
-//   } else {
-//     // scroll down
-//     if (!navbar.classList.contains('open')) {
-//       document.getElementById('navbar').classList.add('hide');
-//       dropdown.style.opacity = '0';
-//     }
-//   }
-//   prevScrollPos = currentScrollPos;
-// };
 
 // dropdown menu
 const about = navLinks[0];

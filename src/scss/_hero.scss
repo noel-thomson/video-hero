@@ -87,7 +87,7 @@
     top: calc(-5vh + 1px);
     left: 50%;
     width: 50%;
-    z-index: 5;
+    z-index: 3;
   }
   .slant:nth-of-type(2) {
     clip-path: polygon(0 100%, 0 0, 100% 100%);
@@ -97,7 +97,7 @@
     top: calc(-5vh + 1px);
     left: 0%;
     width: 50%;
-    z-index: 5;
+    z-index: 3;
   }
 }
 
