@@ -74,6 +74,8 @@
     }
   }
 }
+
+// clip paths
 #spacer {
   height: 500px;
   position: relative;
@@ -82,7 +84,7 @@
     background-color: white;
     position: absolute;
     height: 5vh;
-    top: -5vh;
+    top: calc(-5vh + 1px);
     left: 50%;
     width: 50%;
     z-index: 5;
@@ -92,13 +94,14 @@
     background-color: white;
     position: absolute;
     height: 5vh;
-    top: -5vh;
+    top: calc(-5vh + 1px);
     left: 0%;
     width: 50%;
     z-index: 5;
   }
 }
 
+// animations
 h1 {
   animation: leftIn 0.75s ease;
   animation-fill-mode: forwards;
@@ -142,8 +145,10 @@ h3 {
   }
 }
 
+// media queries
 @media (max-width: 990px) {
   #hero {
+    height: 80vh;
     .content-container {
       h1 {
         font-size: 80px; //

@@ -21,7 +21,10 @@ for (let navLink of navLinks) {
 let prevScrollPos = window.pageYOffset;
 window.onscroll = () => {
   let currentScrollPos = window.pageYOffset;
-  if (window.scrollY === 0) {
+  if (currentScrollPos < 0) {
+    return;
+  }
+  if (currentScrollPos === 0) {
     document.getElementById('navbar').classList.remove('white');
     dropdown.style.opacity = '0';
   } else if (prevScrollPos > currentScrollPos) {
